@@ -1,0 +1,29 @@
+extends layout
+block content
+    if(!user)
+        div.hero-unit
+        h1= title
+        p Welcome to #{tablecontent[1].name}
+        p
+            a.btn.btn-primary.btn-large(href='/login') 登录
+            a.btn.btn-large(href='/reg') 立即注册
+    else
+        p Something is wrong
+    #transform-buttons.btn-group.btn-default
+        button#transform.btn.btn-default
+            i.glyphicon.glyphicon-transfer
+            span(data-es="transformar") transform
+    table.table#table(data="tablecontent",data-single-select="true", data-click-to-select="true")
+        thead
+            tr(checkbox = "true")
+                th(data-checkbox = "true")
+                th(data-field="name") Name
+                th(data-field="city") Stars
+    script.
+        $.get('tablecontent', function (data) {
+            $('#table').bootstrapTable({
+            data: data
+            });
+        });
+
+        $(function(){});

@@ -1,0 +1,58 @@
+//
+   Created by shen on 9/25/15.
+extends layout
+block content
+   script(src='/javascripts/Math.uuid.js')
+   script(src='/javascripts/creatuser.js')
+   div
+      form.form-horizontal(role='form',method='post')
+         fieldset
+            legend User Information
+            .form-group
+               label.col-sm-2.control-label(for='user_name') User Name
+               .col-sm-4
+                  input#user_name.input-xlarge(type='text', placeholder='User Name')
+               label.col-sm-2.control-label(for='telephone_number') Telephone Number
+               .col-sm-4
+                  input#telephone_number.form-control(type='text', placeholder='Telephone Number')
+            .form-group
+               label.col-sm-2.control-label(for='address') Address
+               .col-sm-4
+                  input#address.form-control(type='text', placeholder='Address')
+               label.col-sm-2.control-label(for='others') Others
+               .col-sm-4
+                  input#others.form-control(type='text', placeholder='Others')
+         fieldset#accountInfo
+            legend Account Information
+            .form-group
+               label.col-sm-2.control-label(for='amount') Amount
+               .col-sm-4
+                  input#amount.form-control(type='text', placeholder='Amount')
+               label.col-sm-2.control-label(for='start_date') Start Date
+               .col-sm-4
+                  input#start_date.form-control(type='text', placeholder='Start Date')
+            .form-group
+               label.col-sm-2.control-label(for='end_date') End Date
+               .col-sm-4
+                  input#end_date.form-control(type='text', placeholder='End Date')
+               label.col-sm-2.control-label(for='rate') Rate
+               .col-sm-4
+                  input#rate.form-control(type='text', placeholder='Rate')
+            .pull-right
+               button#add-another-btn.btn.btn-primary.btn-large(data-loading-text = "Add another one", type="button")
+         fieldset
+            p
+               legend Account Information Preview
+               button#del-select-btn.btn.btn-primary.btn-lg(data-loading-text = "Delete selected", type="button")
+            table.table#accont-info-table(data="tablecontent",data-single-select="true", data-click-to-select="true")
+               thead
+                  tr(checkbox = "true")
+                     th(data-field= "checkbox",data-checkbox = "true")
+                     th(data-field= "account_id", data-visible="false") Account ID
+                     th(data-field="amount") Amount
+                     th(data-field="start_date") Start Date
+                     th(data-field="end_date") End Date
+                     th(data-field="rate") Rate
+         .pull-middle
+            button(type='submit' class='btn btn-primary') Submit
+            a.btn.btn-primary.btn-large(href='/') Cancel

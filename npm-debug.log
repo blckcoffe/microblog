@@ -1,0 +1,79 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/lib/node_modules/cnpm/node_modules/.bin/npm',
+1 verbose cli   '--userconfig=/home/shen/.cnpmrc',
+1 verbose cli   '--disturl=https://npm.taobao.org/mirrors/node',
+1 verbose cli   '--cache=/home/shen/.cnpm',
+1 verbose cli   '--registry=https://registry.npm.taobao.org',
+1 verbose cli   '--node-gyp=/usr/local/lib/node_modules/cnpm/node_modules/pangyp/bin/node-gyp.js',
+1 verbose cli   'install',
+1 verbose cli   'cluster' ]
+2 info using npm@2.13.5
+3 info using node@v0.12.7
+4 verbose install initial load of /home/shen/WebstormProjects/microblog/package.json
+5 verbose installManyTop reading scoped package data from /home/shen/WebstormProjects/microblog/node_modules/body-parser/package.json
+6 verbose installManyTop reading scoped package data from /home/shen/WebstormProjects/microblog/node_modules/connect-flash/package.json
+7 verbose installManyTop reading scoped package data from /home/shen/WebstormProjects/microblog/node_modules/connect-mongo/package.json
+8 verbose installManyTop reading scoped package data from /home/shen/WebstormProjects/microblog/node_modules/cookie-parser/package.json
+9 verbose installManyTop reading scoped package data from /home/shen/WebstormProjects/microblog/node_modules/crypto/package.json
+10 verbose installManyTop reading scoped package data from /home/shen/WebstormProjects/microblog/node_modules/debug/package.json
+11 verbose installManyTop reading scoped package data from /home/shen/WebstormProjects/microblog/node_modules/express/package.json
+12 verbose installManyTop reading scoped package data from /home/shen/WebstormProjects/microblog/node_modules/express-session/package.json
+13 verbose installManyTop reading scoped package data from /home/shen/WebstormProjects/microblog/node_modules/jade/package.json
+14 verbose installManyTop reading scoped package data from /home/shen/WebstormProjects/microblog/node_modules/mongodb/package.json
+15 verbose installManyTop reading scoped package data from /home/shen/WebstormProjects/microblog/node_modules/morgan/package.json
+16 verbose installManyTop reading scoped package data from /home/shen/WebstormProjects/microblog/node_modules/serve-favicon/package.json
+17 info package.json connect-flash@0.1.1 No license field.
+18 info package.json connect-mongo@0.8.2 No license field.
+19 info package.json crypto@0.0.3 crypto is also the name of a node core module.
+20 info package.json crypto@0.0.3 No license field.
+21 verbose readDependencies loading dependencies from /home/shen/WebstormProjects/microblog/package.json
+22 silly cache add args [ 'cluster', null ]
+23 verbose cache add spec cluster
+24 silly cache add parsed spec { raw: 'cluster',
+24 silly cache add   scope: null,
+24 silly cache add   name: 'cluster',
+24 silly cache add   rawSpec: '',
+24 silly cache add   spec: '*',
+24 silly cache add   type: 'range' }
+25 silly addNamed cluster@*
+26 verbose addNamed "*" is a valid semver range for cluster
+27 silly addNameRange { name: 'cluster', range: '*', hasData: false }
+28 silly mapToRegistry name cluster
+29 silly mapToRegistry using default registry
+30 silly mapToRegistry registry https://registry.npm.taobao.org/
+31 silly mapToRegistry uri https://registry.npm.taobao.org/cluster
+32 verbose addNameRange registry:https://registry.npm.taobao.org/cluster not in flight; fetching
+33 verbose request uri https://registry.npm.taobao.org/cluster
+34 verbose request no auth needed
+35 info attempt registry request try #1 at 10:23:22
+36 verbose request id 9b6c8f7b35a5a795
+37 http request GET https://registry.npm.taobao.org/cluster
+38 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND proxy.wdf.sap.corp
+39 info attempt registry request try #2 at 10:23:33
+40 http request GET https://registry.npm.taobao.org/cluster
+41 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND proxy.wdf.sap.corp
+42 info attempt registry request try #3 at 10:24:33
+43 http request GET https://registry.npm.taobao.org/cluster
+44 verbose stack Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND proxy.wdf.sap.corp
+44 verbose stack     at ClientRequest.onError (/usr/local/lib/node_modules/cnpm/node_modules/npm/node_modules/request/node_modules/tunnel-agent/index.js:174:17)
+44 verbose stack     at ClientRequest.g (events.js:199:16)
+44 verbose stack     at ClientRequest.emit (events.js:107:17)
+44 verbose stack     at Socket.socketErrorListener (_http_client.js:271:9)
+44 verbose stack     at Socket.emit (events.js:107:17)
+44 verbose stack     at net.js:950:16
+44 verbose stack     at process._tickCallback (node.js:355:11)
+45 verbose cwd /home/shen/WebstormProjects/microblog
+46 error Linux 3.10.0-229.11.1.el7.x86_64
+47 error argv "node" "/usr/local/lib/node_modules/cnpm/node_modules/.bin/npm" "--userconfig=/home/shen/.cnpmrc" "--disturl=https://npm.taobao.org/mirrors/node" "--cache=/home/shen/.cnpm" "--registry=https://registry.npm.taobao.org" "--node-gyp=/usr/local/lib/node_modules/cnpm/node_modules/pangyp/bin/node-gyp.js" "install" "cluster"
+48 error node v0.12.7
+49 error npm  v2.13.5
+50 error code ECONNRESET
+51 error network tunneling socket could not be established, cause=getaddrinfo ENOTFOUND proxy.wdf.sap.corp
+51 error network This is most likely not a problem with npm itself
+51 error network and is related to network connectivity.
+51 error network In most cases you are behind a proxy or have bad network settings.
+51 error network
+51 error network If you are behind a proxy, please make sure that the
+51 error network 'proxy' config is set properly.  See: 'npm help config'
+52 verbose exit [ 1, true ]

@@ -1,0 +1,53 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+    head
+        meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+        link(rel='stylesheet', href='/stylesheets/bootstrap-table.min.css')
+        script(src='/javascripts/jquery.js')
+        script(src='/javascripts/bootstrap.min.js')
+        script(src='/javascripts/bootstrap-table.min.js')
+    body
+        div.navbar.navbar-fixed-top
+            div.narbar-inner
+                div.container
+                    a.btn.btn-navbar(data-toggle='collapse',data-target='.nav-collapse')
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                    p
+                    div.nav-collapse
+
+                            a(href='/') StartPage
+                            a &nbsp|&nbsp
+                            - if (!user){
+                                    a(href='/login') Login
+                                    a &nbsp|&nbsp
+                                    a(href='/reg') Register
+                            - }
+                            - else{
+                                a(href='/logout') Logout
+                                a &nbsp|&nbsp
+                                a(href='/changepwd') Change Password
+                                - if(Administrator){
+                                    a &nbsp|&nbsp
+                                    a(href='/admin') Administrator
+                                - }
+                            - }
+
+        div#container.container
+            - if (success){
+                div.alert.alert-success= success
+            - }
+            - if (error){
+                div.alert.alert-error= error
+            - }
+            block content
+
+        div#footer.footer
+            !='<hr />'
+            p
+            p
+        a(href='http://www.baidu.com' target='_blank') Da Shen [@2015](/user/2015) All Right Reserved
